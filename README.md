@@ -4,6 +4,21 @@ Image build of semantic-release based on Red Hat Universal Base Image (UBI).
 
 ## Generate a new package.json
 
+Steps for creating a fresh package.json from a UBI8 upstream container.
+
+```
+docker run -it --name npm --rm registry.access.redhat.com/ubi8/ubi bash
+```
+
+Install NodeJS in the container.
+
+```
+dnf module enable nodejs:16
+yum install npm
+```
+
+Build the package.json and package-lock.json.
+
 ```
 npm init --yes
 
