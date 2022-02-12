@@ -13,13 +13,16 @@ docker run -it --name npm --rm registry.access.redhat.com/ubi8/ubi bash
 Install NodeJS in the container.
 
 ```
-dnf module enable nodejs:16
-yum install npm
+dnf module enable nodejs:16 -y
+yum install npm -y
 ```
 
 Build the package.json and package-lock.json.
 
 ```
+mkdir workspace
+cd workspace
+
 npm init --yes
 
 npm add semantic-release
@@ -31,4 +34,11 @@ npm add @semantic-release/gitlab
 npm add @semantic-release/release-notes-generator
 npm add @semantic-release/commit-analyzer
 npm add @semantic-release/exec
+```
+
+Copy to git repository.
+
+```
+docker cp npm:/workspace/package.json .
+docker cp npm:/workspace/package-lock.json .
 ```
