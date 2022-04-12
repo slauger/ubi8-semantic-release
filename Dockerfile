@@ -13,7 +13,6 @@ RUN mkdir /opt/semantic-release
 WORKDIR /opt/semantic-release
 
 COPY package.json /opt/semantic-release/package.json
-COPY package-lock.json /opt/semantic-release/package-lock.json
 COPY default.releaserc.json /opt/semantic-release/default.releaserc.json
 
 RUN npm install
