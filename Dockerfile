@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi@sha256:f3e11575aee05d474cb994c0ece89d992ece85be0596480582251fdec7a68f0b
+FROM registry.access.redhat.com/ubi8/ubi@sha256:68fecea0d255ee253acbf0c860eaebb7017ef5ef007c25bee9eeffd29ce85b29
 
 RUN dnf module enable nodejs:16 -y && \
     yum install -y \
