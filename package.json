@@ -1,23 +1,31 @@
 {
-  "name": "v2",
+  "name": "workspace",
   "version": "1.0.0",
-  "description": "",
+  "description": "Image build of semantic-release based on Red Hat Universal Base Image (UBI).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slauger/ubi8-semantic-release.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slauger/ubi8-semantic-release/issues"
+  },
+  "homepage": "https://github.com/slauger/ubi8-semantic-release#readme",
   "dependencies": {
     "@google/semantic-release-replace-plugin": "^1.1.0",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.2",
-    "@semantic-release/gitlab": "^7.0.4",
+    "@semantic-release/github": "^8.0.6",
+    "@semantic-release/gitlab": "^9.4.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "semantic-release": "^19.0.2"
+    "semantic-release": "^19.0.5"
   }
 }
